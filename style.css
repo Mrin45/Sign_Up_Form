@@ -1,211 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
+body{
     font-family: 'Lato', sans-serif;
 }
-
-.outer-box {
+.outer-box{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to top left, #ffef40, #009035);
+    background: linear-gradient(to top left, #3ed8ff, #a8f5ff);
+    /* background: linear-gradient(to top left, #132b31, #a8f5ff); */
 }
-
-.inner-box {
+.inner-box{
     width: 400px;
     margin: 0 auto;
     position: relative;
-    top: 20%;
-    /* transform: translateY(30%); */
+    top: 25%;
+    transform: translateY(-50);
     padding: 20px 30px;
+    /* background-color: #ffffff09; */
     background: linear-gradient(to top left, #ffffffff, #ffffff33);
     backdrop-filter: blur(8px);
     border-radius: 8px;
-    box-shadow: 2px 2px 5px #009035;
+    box-shadow: 2px 2px 5px #2773a5;
     z-index: 2;
 }
 
-.signup-header h1 {
-    font-size: 1.5rem;
+.signup-hearder h1{
+    font-size: 2.5rem;
     color: #212121;
-    text-align: center;
 }
-
-.signup-header p {
+.signup-header p{
     font-size: 0.9rem;
     color: #555;
-    text-align: center;
 }
-.signup-header p:hover {
-    color: #009035;
-    cursor: pointer;
-}
-
-.signup-body {
+.signup-body{
     margin: 20px 0;
 }
-
-.signup-body p {
+.signup-body p{
     margin: 10px 0;
 }
-
-.signup-body label {
+.signup-body p label{
+    display: block;
     font-weight: bold;
-    margin-right: 5px;
 }
-
-.captcha-container {
-    display: flex;
-    align-items: center;
-    /* Vertically center the items */
-    gap: 5px;
-    /* Add some spacing between the items */
-    /* margin-bottom: -17px; */
-}
-
-
-.reload-captcha {
-    /* margin-left: 220px;
-    position: fixed; */
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    border-radius: 4px;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-}
-
-.reload-captcha:hover {
-    background-color: #f0f0f0;
-}
-
-
-
-
-.signup-body p input {
+.signup-body p input{
     width: 100%;
     padding: 10px;
-    border: 2px solid #cccc;
+    border: 2x solid #cccc;
     border-radius: 4px;
     font-size: 1rem;
 }
-
-.signup-body p input[type="submit"] {
-    background-color: #009035;
+.signup-body p input[type="submit"]{
+    background-color: #3498db;
     border: none;
     color: white;
     cursor: pointer;
 }
-
-.signup-body p input[type="submit"]:hover {
-    background-color: #ffef40;
-    color: rgb(0, 0, 0);
+.signup-body p input[type="submit"]:hover{
+    background-color: #2773a5;
+}
+.signup-footer p{
+    color: #555;
+    text-align: center;
+}
+.signup-footer p a{
+    color: #3498db;
 }
 
-
-.circle {
+.circle{
     width: 180px;
     height: 180px;
     border-radius: 100px;
     background: linear-gradient(to top right, #ffffff22, #ffffffff);
     position: absolute;
 }
-
-.c1 {
+.c1{
     top: 100px;
     left: 40px;
 }
-
-.c2 {
+.c2{
     bottom: 100px;
     right: 40px;
-}
-
-/* Media Queries for Responsiveness */
-
-/* For screens smaller than 991px */
-@media (max-width: 991px) {
-    .inner-box {
-        width: 400px;
-        top: 20%;
-    }
-
-    .circle {
-        width: 150px;
-        height: 150px;
-    }
-
-    .c1 {
-        top: 80px;
-        left: 30px;
-    }
-
-    .c2 {
-        bottom: 80px;
-        right: 30px;
-    }
-}
-
-/* For screens smaller than 767px */
-@media (max-width: 767px) {
-    .inner-box {
-        width: 300px;
-    }
-
-    .circle {
-        width: 120px;
-        height: 120px;
-    }
-
-    .c1 {
-        top: 60px;
-        left: 20px;
-    }
-
-    .c2 {
-        bottom: 60px;
-        right: 20px;
-    }
-}
-
-/* For screens smaller than 479px */
-@media (max-width: 479px) {
-    .inner-box {
-        width: 250px;
-        top: 18%;
-        padding: 15px 20px;
-    }
-
-    .signup-header h1 {
-        font-size: 2rem;
-    }
-
-    .signup-header p {
-        font-size: 0.8rem;
-    }
-
-    .circle {
-        width: 100px;
-        height: 100px;
-    }
-
-    .c1 {
-        top: 40px;
-        left: 10px;
-    }
-
-    .c2 {
-        bottom: 40px;
-        right: 10px;
-    }
-    .signup-body label{
-        font-size: 12px;
-    }
 }
