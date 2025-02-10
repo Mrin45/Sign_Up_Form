@@ -1,81 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Sign Up</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <div class="outer-box">
         <div class="inner-box">
             <header class="signup-header">
-                <h1>Sign In</h1>
-                <p>Agriculture Insurance Company of India Ltd.</p>
+                <h1>Sign Up</h1>
+                <p>It just takes 30 seconds</p>
             </header>
 
             <main class="signup-body">
-                <form action="/signin" method="POST">
+                <form action="#">
                     <p>
-                        <label for="userId">User ID</label>
-                        <input type="text" id="userId" name="userId" placeholder="enter user id" required>
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" placeholder="Peter Parker" required>
                     </p>
                     <p>
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="enter your password" required>
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" placeholder="peterparker12@gmail.com" required>
                     </p>
-
-
-                    <!-- Text CAPTCHA -->
-                    <div class="captcha-container">
-                        <label for="captchaInput">Enter CAPTCHA :</label>
-                        <span id="captchaText"></span> <!-- Where CAPTCHA text will be shown -->
-                        <div id="reloadCaptcha" class="reload-captcha">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"
-                                fill="#009035">
-                                <path
-                                    d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0020 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 004 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z" />
-                            </svg>
-                        </div>
-                    </div>
-
-
                     <p>
-                        <input type="text" id="captcha" name="captchaInput" placeholder="enter CAPTCHA" required>
+                        <label for="password">Your New password</label>
+                        <input type="password" id="password" placeholder="at least 8 characters" required>
                     </p>
-                    <p><input type="submit" id="submit" value="Sign In"></p>
-
+                    <p><input type="submit" id="submit" value="Create Account"></p>
                 </form>
             </main>
+
+            <footer class="signup-footer">
+                <p>Already have an Account? <a href="#">Login</a></p>
+            </footer>
         </div>
         <div class="circle c1"></div>
         <div class="circle c2"></div>
     </div>
-
-    <script>
-        document.getElementById('reloadCaptcha').addEventListener('click', reloadCaptcha);
-
-        // Fetch CAPTCHA from the backend and display it
-        function fetchCaptcha() {
-            fetch('/captcha')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('captchaText').textContent = data.captcha;
-                })
-                .catch(error => console.error('Error fetching CAPTCHA:', error));
-        }
-
-        // Call fetchCaptcha on page load to show CAPTCHA initially
-        fetchCaptcha();
-
-        // Reload CAPTCHA when the "Reload CAPTCHA" button is clicked
-        function reloadCaptcha() {
-            fetchCaptcha();
-        }
-    </script>
-
 </body>
-
 </html>
